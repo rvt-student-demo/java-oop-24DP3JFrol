@@ -1,4 +1,6 @@
 package rvt;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -6,6 +8,44 @@ public class ToDoList {
     // PART 1
     public static class TodoList {
         private ArrayList<String> tasks;
+
+        private final String filePath = "rvt/todo.csv";
+
+        private void loadFromFile() {
+            try {
+                File file = new File(filePath);
+                Scanner reader = new Scanner(file);
+
+                if (fileScanner.hasNextLine()) {
+                    fileScanner.nextLine();
+                }
+                while (fileScanner.hasNextLine()) {
+                    String line = fileScanner.nextLine();
+                    String[] parts = line.split(";");
+                    if (parts.lenght > 1) {
+                        tasks.add(parts[1]);
+                    }
+                }
+
+                fileScanner.close();
+
+            } catch (Exception e) {
+                System.out.println("Error loading tasks: ");
+            }
+        }
+
+        private void updateFile() {
+            try {
+                FileWriter writer = new FileWriter(filePath);
+                writer.write("id,task\n");
+                for (int i = 0; i<tasks.size(); i++) {
+                    writer.write((i + 1) + "," + tasks.get(i) + "\n");
+                }
+                writer.close();
+            } catch (IOException e) {
+                System.out.println("Error updating file: ");
+            }
+        }
 
         public TodoList(){
             this.tasks = new ArrayList<>();
