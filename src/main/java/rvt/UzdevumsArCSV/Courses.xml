@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<kursi>
+
+    <kurss id="1">
+        <nosaukums>Java pamati</nosaukums>
+        <apraksts>Ievads Java programmēšanā</apraksts>
+        <pasniedzejs>Malickis Vadims</pasniedzejs>
+        <ilgums>40</ilgums>
+        <studentuSkaits>28</studentuSkaits>
+        <limenis>Iesācējs</limenis>
+    </kurss>
+
+    <kurss id="2">
+        <nosaukums>Web izstrāde</nosaukums>
+        <apraksts>HTML, CSS un JavaScript pamati</apraksts>
+        <pasniedzejs>Halvaša Hatuna</pasniedzejs>
+        <ilgums>40</ilgums>
+        <studentuSkaits>27</studentuSkaits>
+        <limenis>Vidējs</limenis>
+    </kurss>
+
+    <kurss id="3">
+        <nosaukums>Datu bāzes</nosaukums>
+        <apraksts>SQL un datu bāzu modelēšana</apraksts>
+        <pasniedzejs>Matvejeva Jelena</pasniedzejs>
+        <ilgums>80</ilgums>
+        <studentuSkaits>14</studentuSkaits>
+        <limenis>Profesionāls</limenis>
+    </kurss>
+
+</kursi>
